@@ -1,0 +1,31 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  color: tomato;
+}
+.keys{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 50vh;
+}
+.key{
+  display: flex;
+  flex-direction: column;
+  font-size: clamp( .4rem, 1.25rem, 1.5rem);
+  padding: .5rem;
+  text-align: center;
+  border: 2px solid black;
+  flex-basis: 5%;
+  border-radius: 5px;
+}
+kbd{
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: .09s;
+}
+.playing{
+  color: tomato;
+  transform: scale(1.2);
+}
