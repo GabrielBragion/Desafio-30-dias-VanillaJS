@@ -1,0 +1,13 @@
+:root{
+  --spacing: 32px;
+  --blur: 10px;
+  --moldura: #ff6347;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #a6b851;
+  overflow: hidden;
+}
+.wrap{
+  text-align: center;
+}
