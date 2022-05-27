@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #efefef;
+}
+h1{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.paineis{
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  font-size: 2rem;
+}
+.painel{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.painel1{
+  background-color: #581818;
+}
+.painel2{
+  background-color: #2d7d2d;
+}
+.painel3{
+  background-color: #2a2a67;
+}
+.painel4{
+  background-color: #b25949;
+}
+.painel5{
+  background-color: #741174;
+}
+.painel > *{
+  flex: 1 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+}
+.painel > *:first-child{transform: translateY(-100%);opacity: 0;}
+.painel.open-active > *:first-child{transform: translateY(0);opacity: 1;}
+.painel > *:last-child{transform: translateY(100%);opacity: 0;}
+.painel.open-active > *:last-child{transform: translateY(0);opacity: 1;}
+
+.painel.open{
+  flex: 4;
+  font-size: 4rem;
+}
