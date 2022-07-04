@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detecção de Teclas</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    .quadrado{
+      background-color: green;
+      width: 300px;
+      height: 300px;
+      margin: 100px auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Digite "azul" para mudar a cor do quadrado e "back" para voltar a cor original</h1>
+  <div class="quadrado"></div>
+  <script>
+    const quadrado = document.querySelector(".quadrado")
+    const teclasPresionadas = []
+    const palavraSecreta  = "azul"
+    const palavraBack = "back"
+
+    window.addEventListener("keyup", (e)=>{
+      teclasPresionadas.push(e.key)
+      teclasPresionadas.splice(-palavraSecreta.length - 1, teclasPresionadas.length - palavraSecreta.length)
+      if(teclasPresionadas.join("") === palavraSecreta){
+        quadrado.style.background = "blue"
+      }else if(teclasPresionadas.join("").includes(palavraBack)){
+        quadrado.style.background = "green"
+      }
+      
+    })
+  </script>
+</body>
+</html>
